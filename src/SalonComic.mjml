@@ -1,0 +1,79 @@
+<mjml>
+    <mj-head>
+        <mj-font name="Rammetto One" href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" />
+        <mj-attributes>
+            <mj-all font-family="'Rammetto One', Helvetica, Arial, sans-serif" />
+        </mj-attributes>
+        <mj-style>
+            .text-shadow {
+                text-shadow: 2px 2px 4px #1a3a22;
+            }
+        </mj-style>
+    </mj-head>
+
+    <mj-body background-color="#32754C">
+        
+        <!-- Cabecera con imagen -->
+        <mj-section background-color="#32754C" padding="0">
+            <mj-column>
+            <mj-image 
+                src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/images/Cabecera-SALONCOMIC.jpg" 
+                alt="Salón del Cómic de Valencia" 
+                padding="0"
+                border-radius="10px"
+            />
+            </mj-column>
+        </mj-section>
+
+        <!-- Contenido principal -->
+        <mj-section background-color="#4CAF72" border-radius="10px" padding="20px">
+          <mj-column>
+            <mj-text align="center" font-size="22px" color="#ffffff" font-weight="bold" css-class="text-shadow">
+              Newsletter
+            </mj-text>
+            <mj-text font-size="16px" color="#ffffff" font-weight="bold" css-class="text-shadow">
+              ¡Hola [nombre]!
+            </mj-text>
+            <mj-text font-size="16px" color="#ffffff" css-class="text-shadow">
+              ¡El salón del Cómic se acerca y venimos a informarte de todas las novedades y actividades que alojaremos durante el evento!
+            </mj-text>
+
+            <mj-text font-size="16px" color="#ffffff" css-class="text-shadow">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 12px;"><strong>CÓMIC:</strong> Talleres, charlas y presentaciones para flipar con tus autores/as favoritos/as. Viñetas por un tubo.</li>
+                <li style="margin-bottom: 12px;"><strong>COSPLAY:</strong> Escenario propio con concursos y exhibiciones. ¡Los cosplayers sacan la artillería pesada!</li>
+                <li style="margin-bottom: 12px;"><strong>JOC & ROL:</strong> Juegos de mesa y rol con partidas, demos y torneos. Si te va tirar dados, esta es tu zona.</li>
+                <li style="margin-bottom: 12px;"><strong>KIDS & COMIC:</strong> Peques al poder. Talleres y actividades para que aprendan jugando y se enganchen al cómic.</li>
+                <li style="margin-bottom: 12px;"><strong>ARTIST ALLEY:</strong> Cazatalentos en acción. Arte original y cómics indie a cascoporro. ¡Ideal para llevarte algo único!</li>
+                <li style="margin-bottom: 12px;"><strong>ESCENARIO PRINCIPAL:</strong> Shows, concursos y actuaciones para levantar al público de la silla.</li>
+                <li style="margin-bottom: 12px;"><strong>ZONA ASIA:</strong> Todo lo asiático en un solo lugar: manga, anime, videojuegos... ¡Una explosión cultural!</li>
+                <li><strong>EXPOSICIONES:</strong> Obras de grandes artistas y nuevos talentos. Un viaje visual por lo mejor del cómic mundial.</li>
+              </ul>
+            </mj-text>
+          </mj-column>
+        </mj-section>
+
+        <!-- Encuesta -->
+        <mj-section background-color="#32754C" border-radius="15px" padding="10px 25px">
+            <mj-column>
+                <mj-button background-color="#ffffff" color="#2E6B3D" font-weight="bold" font-family="'Rammetto One', Helvetica, Arial, sans-serif" href="#">
+                    Pincha aquí para realizar una encuesta... ¡tiene recompensa!
+                </mj-button>
+            </mj-column>
+        </mj-section>
+
+        <!-- Redes Sociales -->
+        <mj-section background-color="#32754C" padding="10px">
+            <mj-column>
+                <mj-text align="center" font-size="16px" color="#ffffff" font-weight="bold" css-class="text-shadow">
+                    ¡Síguenos en redes sociales para no perderte nada!
+                </mj-text>
+                <mj-social font-family="'Rammetto One', Helvetica, Arial, sans-serif" font-size="15px" icon-size="30px" mode="horizontal" align="center">
+                    <mj-social-element name="instagram" href="https://instagram.com/saloncomicvalencia">@saloncomicvalencia</mj-social-element>
+                    <mj-social-element name="x" href="https://x.com/SalonComicVlc">@SalonComicVlc</mj-social-element>
+                </mj-social>
+            </mj-column>
+        </mj-section>
+
+    </mj-body>
+</mjml>
