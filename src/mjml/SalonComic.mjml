@@ -57,7 +57,7 @@
         <mj-section background-color="#32754C" border-radius="15px" padding="10px 25px">
             <mj-column>
                 <mj-button background-color="#ffffff" color="#2E6B3D" font-weight="bold" font-family="'Rammetto One', Helvetica, Arial, sans-serif" href="#">
-                    Pincha aquí para realizar una encuesta... ¡tiene recompensa!
+                    Pincha aquí para realizar una encuesta... ¡tiene recompensa! <a href="https://www.google.es" style="color:#2E6B3D; text-decoration:underline;">Ir a Google</a>
                 </mj-button>
             </mj-column>
         </mj-section>
