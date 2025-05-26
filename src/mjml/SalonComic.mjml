@@ -32,7 +32,7 @@
               Newsletter
             </mj-text>
             <mj-text font-size="16px" color="#ffffff" font-weight="bold" css-class="text-shadow">
-              ¡Hola [nombre]!
+              ¡Hola {{nombre}}!
             </mj-text>
             <mj-text font-size="16px" color="#ffffff" css-class="text-shadow">
               ¡El salón del Cómic se acerca y venimos a informarte de todas las novedades y actividades que alojaremos durante el evento!
