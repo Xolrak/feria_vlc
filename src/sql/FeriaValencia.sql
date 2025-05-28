@@ -21,6 +21,7 @@ CREATE TABLE Hacen (
     id_user INT,
     id_encuesta INT,
     realizada BOOLEAN DEFAULT FALSE,
+    correo_enviado BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (id_user, id_encuesta),
     FOREIGN KEY (id_user) REFERENCES Usuarios(id_user) ON DELETE CASCADE,
     FOREIGN KEY (id_encuesta) REFERENCES Encuesta(id_encuesta) ON DELETE CASCADE
