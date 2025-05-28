@@ -1,3 +1,4 @@
 src/credenciales.inf
 src/docker/.env
+src/docker/data
 src/sql/Datos.sql
