@@ -23,3 +23,10 @@ apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker
 
 # Instalar el conector MySQL para Python
 apt install -y python3-mysql.connector
+
+# Instalar node.js
+curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+apt install -y nodejs
+
+# Instalar compilador de MJML
+sudo npm install -g mjml
