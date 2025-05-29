@@ -34,4 +34,4 @@ convertir_mjml_a_html
 
 # Ejecutar el script de Python para enviar correos
 echo -e "\e[33mLanzando el script de envío de correos...\e[0m"
-python3 ../python/EnviarCorreos.py
+python3 ./EnviarCorreos.py

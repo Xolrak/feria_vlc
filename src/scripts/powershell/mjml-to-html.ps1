@@ -1,6 +1,6 @@
 # Rutas de las carpetas
-$mjmlFolder = ".\mjml"
-$htmlFolder = ".\html"
+$mjmlFolder = "..\..\mjml"
+$htmlFolder = "..\..\html"
 
 # comprobación de carpeta de destino
 if (!(Test-Path $htmlFolder)) {

@@ -120,7 +120,7 @@ else:
                 servidor.starttls()
                 servidor.login(EMAIL, APP_PASSWORD)
                 servidor.send_message(mensaje)
-            print(f"✅ Correo enviado a {nombre} <{correo}>")
+            print(f"Correo enviado a {nombre} <{correo}>")
             marcar_correo_enviado(db_config, id_usuario, id_encuesta)
         except Exception as e:
-            print(f"❌ Error enviando correo a {correo}: {e}")
+            print(f"Error enviando correo a {correo}: {e}")

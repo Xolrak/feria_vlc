@@ -17,7 +17,7 @@
         <mj-section background-color="#32754C" padding="0">
             <mj-column>
             <mj-image 
-                src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/images/Cabecera-SALONCOMIC.jpg" 
+                src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/assets/images/salon_comic/cabecera.jpg" 
                 alt="Salón del Cómic de Valencia" 
                 padding="0"
                 border-radius="10px"
