@@ -10,6 +10,13 @@
 #!/bin/bash
 set -e  # Si algo falla, para el script
 
+# Verificación de archivo de credenciales
+if [ ! -f ../credenciales.inf ]; then
+    echo -e "\e[31mError: No se encontró el archivo '../credenciales.inf'.\e[0m"
+    echo -e "\e[31mAsegúrate de que existe antes de continuar.\e[0m"
+    exit 1
+fi
+
 convertir_mjml_a_html() {
     local mjmlFolder="../mjml"
     local htmlFolder="../html"
