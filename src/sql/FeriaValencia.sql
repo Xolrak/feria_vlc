@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS FeriaEncuestas
     COLLATE utf8mb4_unicode_ci;
 
 -- Usar la base de datos
-USE FeriaEncuestas;
+USE Feria;
 
 -- Tabla de Usuarios
 CREATE TABLE Usuarios (
