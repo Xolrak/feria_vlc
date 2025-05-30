@@ -38,3 +38,13 @@ def marcar_correo_enviado(db_config, id_usuario, id_encuesta):
 
     cursor.close()
     cnx.close()
+
+def obtener_todos_los_usuarios(db_config):
+    import mysql.connector
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    cursor.execute("SELECT id_usuario, correo_electronico, nombre FROM Usuarios;")
+    usuarios = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return usuarios
