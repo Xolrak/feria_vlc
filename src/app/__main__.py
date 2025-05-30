@@ -4,7 +4,7 @@
 Script name: __main__.py
 Author: Carlos Castañeda
 Description: main de la app que gestiona los envios de correos
-Version: 5.0
+Version: 6.0
 """
 
 import os
@@ -23,8 +23,8 @@ def main():
     if len(sys.argv) != 2 or sys.argv[1] not in ["1", "2"]:
         print("Uso: python __main__.py <opcion>")
         print("Opciones:")
-        print("  1 - Enviar correos solo a usuarios que aún no lo han recibido")
-        print("  2 - Enviar correos a TODOS los usuarios (sin comprobar)")
+        print("  1 - Sorteo dos entradsa para 2RUEDAS por hacer encuesta")
+        print("  2 - Newsletter del Salón del Cómic")
         sys.exit(1)
 
     opcion = sys.argv[1]
@@ -60,7 +60,7 @@ def main():
             print(f"Se enviarán correos a {len(usuarios)} usuarios (con filtro).")
             for id_usuario, correo, nombre in usuarios:
                 try:
-                    enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html)
+                    enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html, 1)
                     print(f"Correo enviado a {nombre} <{correo}>")
                     marcar_correo_enviado(db_config, id_usuario, id_encuesta)
                 except Exception as e:
@@ -72,7 +72,7 @@ def main():
         print(f"Se enviarán correos a {len(usuarios)} usuarios (sin filtro).")
         for id_usuario, correo, nombre in usuarios:
             try:
-                enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html)
+                enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html, 2)
                 print(f"Correo enviado a {nombre} <{correo}>")
             except Exception as e:
                 print(f"Error enviando correo a {correo}: {e}")
