@@ -14,4 +14,4 @@ fi
 docker network create bbdd-network || true
 
 # Levanta los servicios definidos en el docker-compose
-docker-compose up -d
+docker compose up -d
