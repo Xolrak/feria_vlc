@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Actualizar el sistema
 apt update
 apt upgrade -y
 
@@ -16,17 +17,18 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" \
 > /etc/apt/sources.list.d/docker.list
 
+# Actualizar con el nuevo repositorio de Docker
 apt update
 
-# Instalar Docker y plugins
+# Instalar Docker y sus plugins
 apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Instalar el conector MySQL para Python
-apt install -y python3-mysql.connector
+# Instalar dependencias necesarias para compilar mysqlclient con pip
+apt install -y python3.12-dev default-libmysqlclient-dev build-essential
 
-# Instalar node.js
+# Instalar Node.js (versión LTS)
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt install -y nodejs
 
-# Instalar compilador de MJML
-sudo npm install -g mjml
+# Instalar MJML (motor de plantillas de emails)
+npm install -g mjml
