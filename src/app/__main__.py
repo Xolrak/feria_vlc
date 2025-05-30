@@ -4,19 +4,14 @@
 Script name: __main__.py
 Author: Carlos Castañeda
 Description: main de la app que gestiona los envios de correos
-Version: 4.0
+Version: 5.0
 """
 
 import os
+import sys
 from config import leer_credenciales, comprobar_credenciales
 from database import obtener_usuarios_sin_correo, marcar_correo_enviado, obtener_todos_los_usuarios
 from mailer import enviar_correo
-
-def mostrar_menu():
-    print("\n--- MENÚ ---")
-    print("1. Enviar correos SOLO a usuarios que aún no lo han recibido (HTML 1)")
-    print("2. Enviar correos a TODOS los usuarios (HTML 2, sin comprobar)")
-    print("3. Salir")
 
 def cargar_html(nombre_archivo):
     ruta_base = os.path.dirname(__file__)
@@ -25,6 +20,15 @@ def cargar_html(nombre_archivo):
         return f.read()
 
 def main():
+    if len(sys.argv) != 2 or sys.argv[1] not in ["1", "2"]:
+        print("Uso: python __main__.py <opcion>")
+        print("Opciones:")
+        print("  1 - Enviar correos solo a usuarios que aún no lo han recibido")
+        print("  2 - Enviar correos a TODOS los usuarios (sin comprobar)")
+        sys.exit(1)
+
+    opcion = sys.argv[1]
+
     ruta_base = os.path.dirname(__file__)
     ruta_info = os.path.normpath(os.path.join(ruta_base, '..', 'credenciales.inf'))
     comprobar_credenciales(ruta_info)
@@ -43,46 +47,36 @@ def main():
 
     id_encuesta = 1
 
-    # Aquí defines los HTMLs por separado
+    # HTMLs independientes para cada opción
     archivo_html_opcion_1 = "SalonComic.html"
     archivo_html_opcion_2 = "SalonComic.html"
 
-    html_opcion_1 = cargar_html(archivo_html_opcion_1)
-    html_opcion_2 = cargar_html(archivo_html_opcion_2)
-
-    while True:
-        mostrar_menu()
-        opcion = input("Elige una opción (1-3): ").strip()
-
-        if opcion == "1":
-            usuarios = obtener_usuarios_sin_correo(db_config, id_encuesta)
-            if not usuarios:
-                print("No hay usuarios pendientes de recibir el correo.")
-            else:
-                print(f"Se enviarán correos a {len(usuarios)} usuarios (con filtro).")
-                for id_usuario, correo, nombre in usuarios:
-                    try:
-                        enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html_opcion_1)
-                        print(f"Correo enviado a {nombre} <{correo}>")
-                        marcar_correo_enviado(db_config, id_usuario, id_encuesta)
-                    except Exception as e:
-                        print(f"Error enviando correo a {correo}: {e}")
-
-        elif opcion == "2":
-            usuarios = obtener_todos_los_usuarios(db_config)
-            print(f"Se enviarán correos a {len(usuarios)} usuarios (sin filtro).")
+    if opcion == "1":
+        html = cargar_html(archivo_html_opcion_1)
+        usuarios = obtener_usuarios_sin_correo(db_config, id_encuesta)
+        if not usuarios:
+            print("No hay usuarios pendientes de recibir el correo.")
+        else:
+            print(f"Se enviarán correos a {len(usuarios)} usuarios (con filtro).")
             for id_usuario, correo, nombre in usuarios:
                 try:
-                    enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html_opcion_2)
+                    enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html)
                     print(f"Correo enviado a {nombre} <{correo}>")
+                    marcar_correo_enviado(db_config, id_usuario, id_encuesta)
                 except Exception as e:
                     print(f"Error enviando correo a {correo}: {e}")
 
-        elif opcion == "3":
-            print("¡Hasta luego!")
-            break
-        else:
-            print("Opción no válida, prueba otra vez.")
+    elif opcion == "2":
+        html = cargar_html(archivo_html_opcion_2)
+        usuarios = obtener_todos_los_usuarios(db_config)
+        print(f"Se enviarán correos a {len(usuarios)} usuarios (sin filtro).")
+        for id_usuario, correo, nombre in usuarios:
+            try:
+                enviar_correo(EMAIL, APP_PASSWORD, correo, nombre, html)
+                print(f"Correo enviado a {nombre} <{correo}>")
+            except Exception as e:
+                print(f"Error enviando correo a {correo}: {e}")
 
 if __name__ == "__main__":
     main()
+

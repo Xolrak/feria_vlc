@@ -7,7 +7,8 @@
 # Version: 1.0
 ###########
 
-#!/bin/bash
+clear
+
 set -e  # Si algo falla, para el script
 
 # Verificación de archivo de credenciales
@@ -56,6 +57,6 @@ fi
 
 source "$VENV_PATH"
 
-python __main__.py
+python __main__.py 2
 
 echo -e "\e[32mCorreos enviados!\e[0m"
