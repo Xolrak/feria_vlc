@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ##########
-# Script name: main.sh
+# Script name: launch.sh
 # Description: Este script ejecuta en cadena todo lo necesario para
-#              enviar los mails
+#              ejecutar la app de envio de mails usando Linux
 # Version: 1.0
 ###########
 
