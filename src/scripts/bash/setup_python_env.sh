@@ -54,6 +54,3 @@ if ! pip show mysqlclient >/dev/null 2>&1; then
 else
     echo "mysqlclient ya está instalado."
 fi
-
-echo "Todo listo, socio. Puedes ejecutar tu script con:"
-echo "¡python3 /home/ubuntu/feria_vlc/src/app/mailer.py"
