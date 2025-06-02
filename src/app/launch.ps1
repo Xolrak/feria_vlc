@@ -65,7 +65,7 @@ function Ejecutar-App {
     # La opcion 1 envia correos y marca a la lista de remitentes como ya enviados en la bbdd
     # La opcion 2 envia los correos independientemente de si ya se les habían enviado correos
     [int]$opcion = 2
-    python3 .\__main__.py $opcion
+    python .\__main__.py $opcion
     Write-Host "Correos enviados" -ForegroundColor Green
 }
 
