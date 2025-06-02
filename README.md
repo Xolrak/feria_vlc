@@ -1,19 +1,88 @@
-En este repositorio guardaré todos los proyectos relacionados con la fería de Valencia.
+# 🎪 Proyecto de Prácticas en la Feria de Valencia
 
-## CASOS PRÁCTICOS 
+¡Bienvenido al repositorio! 👋  
+En este repositorio tengo los templates de los mails y la app desarrollada en Python que se encarga de enviarlos (base de datos incluida sin datos).
 
-### Supuesto 1 
-Creación de un boletín informativo para Salón del Cómic de València, destacando noticias y promociones especiales.  
-![Salón del comic de Valencia](./assets/images/salon_comic/cabecera.jpg)
+## 📬 ¿Qué contiene este repositorio?
 
-### Supuesto 2
-Cevisama debe comunicar una gran inversión realizada para atraer compradores (Visitantes) internacionales, necesitamos transmitirlo al expositor.  
-![CEVISAMA](./assets/images/cevisama/cabecera.jpg)
+- 📨 **Templates MJML**.
+- 🐍 **Aplicación en Python** para el envío automatizado de los mails.
+- 🗃️ **Base de datos MySQL** incluida (sin datos).
 
-### Supuesto 3
-Expojove tiene que enviar una comunicación a sus expositores destacando los servicios a los que tienen acceso y como solicitarlos.  
-![EXPOJOVE](./assets/images/expojove/cabecera.jpg)
+## ⚠️ Nota
+- La base de datos está vacía.  
+- Los archivos de configuración están incluidos como ejemplos (`.ejemplo`) para que puedas replicarlos.
 
-### Supuesto 4
-La feria dos ruedas sortea dos entradas para ver el GP de motociclismo de Cheste entre todos los que cumplimenten el formulario de las entradas a la feria antes del 1 de septiembre.  
-![2RUEDAS](./assets/images/2ruedas/cabecera.jpg)
+## 🛠️ ¿Qué tecnologias uso?
+- 🐍 **Python**
+- 🐬 **MySQL**
+- 📨 **MJML / HTML**
+- 🐳 **Docker**
+- 🐧 **Bash**
+- 🪟 **PowerShell**
+
+## 📦 Índice del Repositorio
+
+📄 [`.gitattributes`](./.gitattributes)  
+📄 [`.gitignore`](./.gitignore)   
+📄 [`README.md`](./README.md)  
+
+📁 [`assets/`](./assets)  
+- ↳ 📁 [`diagrams/`](./assets/diagrams)  
+  - ↳ ↳ 📄 [`bbdd.dia`](./assets/diagrams/bbdd.dia)  
+- ↳ 📁 [`images/`](./assets/images)  
+  - ↳ ↳ 📁 [`2ruedas/`](./assets/images/2ruedas)  
+    - ↳ ↳ ↳ 📄 [`cabecera.jpg`](./assets/images/2ruedas/cabecera.jpg)  
+  - ↳ ↳ 📁 [`cevisama/`](./assets/images/cevisama)  
+    - ↳ ↳ ↳ 📄 [`cabecera.jpg`](./assets/images/cevisama/cabecera.jpg)  
+  - ↳ ↳ 📁 [`expojove/`](./assets/images/expojove)  
+    - ↳ ↳ ↳ 📄 [`cabecera.jpg`](./assets/images/expojove/cabecera.jpg)  
+  - ↳ ↳ 📁 [`salon_comic/`](./assets/images/salon_comic)  
+    - ↳ ↳ ↳ 📄 [`cabecera.jpg`](./assets/images/salon_comic/cabecera.jpg)  
+    - ↳ ↳ ↳ 📄 [`conceptoMail.png`](./assets/images/salon_comic/conceptoMail.png)  
+    - ↳ ↳ ↳ 📄 [`FODA.png`](./assets/images/salon_comic/FODA.png)  
+
+📁 [`docs/`](./docs)  
+- ↳ 📄 [`SalonComic.md`](./docs/SalonComic.md)  
+
+📁 [`src/`](./src)  
+- ↳ 📄 [`credenciales.inf.ejemplo`](./src/credenciales.inf.ejemplo)  
+- ↳ 📁 [`app/`](./src/app)  
+  - ↳ ↳ 📄 [`config.py`](./src/app/config.py)  
+  - ↳ ↳ 📄 [`database.py`](./src/app/database.py)  
+  - ↳ ↳ 📄 [`launch.ps1`](./src/app/launch.ps1)  
+  - ↳ ↳ 📄 [`launch.sh`](./src/app/launch.sh)  
+  - ↳ ↳ 📄 [`mailer.py`](./src/app/mailer.py)  
+  - ↳ ↳ 📄 [`__main__.py`](./src/app/__main__.py)  
+
+- ↳ 📁 [`docker/`](./src/docker)  
+  - ↳ ↳ 📄 [`.env.ejemplo`](./src/docker/.env.ejemplo)  
+  - ↳ ↳ 📄 [`docker-compose.yml`](./src/docker/docker-compose.yml)  
+
+- ↳ 📁 [`html/`](./src/html)  
+  - ↳ ↳ 📄 [`SalonComic.html`](./src/html/SalonComic.html)  
+
+- ↳ 📁 [`mjml/`](./src/mjml)  
+  - ↳ ↳ 📄 [`SalonComic.mjml`](./src/mjml/SalonComic.mjml)  
+
+- ↳ 📁 [`scripts/bash/`](./src/scripts/bash)  
+  - ↳ ↳ 📄 [`levanta_docker.sh`](./src/scripts/bash/levanta_docker.sh)  
+  - ↳ ↳ 📄 [`setup_all.sh`](./src/scripts/bash/setup_all.sh)  
+  - ↳ ↳ 📄 [`setup_base.sh`](./src/scripts/bash/setup_base.sh)  
+  - ↳ ↳ 📄 [`setup_python_env.sh`](./src/scripts/bash/setup_python_env.sh)  
+
+- ↳ 📁 [`sql/`](./src/sql)  
+  - ↳ ↳ 📄 [`FeriaValencia.sql`](./src/sql/FeriaValencia.sql)  
+
+  
+
+
+## 📧 Supuesto 1: Template de la Newsletter del Salón del Manga
+
+### 🎨 Vista previa del diseño
+
+![FODA - Concepto del Mail](./assets/images/salon_comic/conceptoMail.png)
+
+---
+
+*Este es el template que de la newsletter del Salón del Manga, listo para enviar.*
