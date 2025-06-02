@@ -1,0 +1,7 @@
+email=tucorreo@correo.es
+app_password=tu_contrasenia
+db_host=127.0.0.1
+db_user=usuario_bbdd
+db_password=contrasenia_bbdd
+db_nombre=nombre_bbdd
+db_port=3306
