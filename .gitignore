@@ -3,3 +3,4 @@ src/docker/.env
 src/docker/data
 src/sql/Datos.sql
 src/app/__pycache__
+src/html
