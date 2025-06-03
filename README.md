@@ -65,11 +65,11 @@ En este repositorio tengo los templates de los mails y la app desarrollada en Py
 - ↳ 📁 [`mjml/`](./src/mjml)  
   - ↳ ↳ 📄 [`SalonComic.mjml`](./src/mjml/SalonComic.mjml)  
 
-- ↳ 📁 [`scripts/bash/`](./src/scripts/bash)  
-  - ↳ ↳ 📄 [`levanta_docker.sh`](./src/scripts/bash/levanta_docker.sh)  
-  - ↳ ↳ 📄 [`setup_all.sh`](./src/scripts/bash/setup_all.sh)  
-  - ↳ ↳ 📄 [`setup_base.sh`](./src/scripts/bash/setup_base.sh)  
-  - ↳ ↳ 📄 [`setup_python_env.sh`](./src/scripts/bash/setup_python_env.sh)  
+- ↳ 📁 [`scripts/`](./src/scripts)  
+  - ↳ ↳ 📄 [`levanta_docker.sh`](./src/scripts/levanta_docker.sh)  
+  - ↳ ↳ 📄 [`setup_all.sh`](./src/scripts/setup_all.sh)  
+  - ↳ ↳ 📄 [`setup_base.sh`](./src/scripts/setup_base.sh)  
+  - ↳ ↳ 📄 [`setup_python_env.sh`](./src/scripts/setup_python_env.sh)  
 
 - ↳ 📁 [`sql/`](./src/sql)  
   - ↳ ↳ 📄 [`FeriaValencia.sql`](./src/sql/FeriaValencia.sql)  
