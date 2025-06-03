@@ -2,13 +2,23 @@
 # Script name: launch.ps1
 # Description: Este script ejecuta en cadena todo lo necesario para
 #              ejecutar la app de envio de mails usando Windows
-# Version: 1.0
+# Version: 1.2
 ###########
 
 Clear-Host
 
 # Cambia el directorio actual al directorio del script
 Set-Location -LiteralPath $PSScriptRoot
+
+function Mostrar-Menu {
+    Write-Host "`n=== Menú de Envío de Correos ===" -ForegroundColor Cyan
+    Write-Host "1. Enviar Newsletter del Salón del Cómic (todos los usuarios)"
+    Write-Host "2. Enviar Sorteo 2RUEDAS (solo usuarios pendientes)"
+    Write-Host "3. Insertar nuevo usuario en la base de datos"
+    Write-Host "Q. Salir"
+    Write-Host "================================`n" -ForegroundColor Cyan
+}
+
 function Comprobar-Archivos {
 
     [string]$credenciales = "../credenciales.inf"
@@ -61,12 +71,34 @@ function Convertir-MjmlAHtml {
     }
 }
 function Ejecutar-App {
+    Mostrar-Menu
+    $opcion = Read-Host "Seleccione una opción"
     
-    # La opcion 1 envia correos y marca a la lista de remitentes como ya enviados en la bbdd
-    # La opcion 2 envia los correos independientemente de si ya se les habían enviado correos
-    [int]$opcion = 2
-    python .\__main__.py $opcion
-    Write-Host "Correos enviados" -ForegroundColor Green
+    switch ($opcion.ToUpper()) {
+        "1" {
+            Write-Host "Enviando Newsletter del Salón del Cómic..." -ForegroundColor Yellow
+            python .\__main__.py 1
+            Write-Host "Proceso completado" -ForegroundColor Green
+        }
+        "2" {
+            Write-Host "Enviando correos de sorteo 2RUEDAS..." -ForegroundColor Yellow
+            python .\__main__.py 2
+            Write-Host "Proceso completado" -ForegroundColor Green
+        }
+        "3" {
+            Write-Host "Iniciando inserción de nuevo usuario..." -ForegroundColor Yellow
+            python .\__main__.py 3
+            Write-Host "Proceso completado" -ForegroundColor Green
+        }
+        "Q" {
+            Write-Host "Saliendo..." -ForegroundColor Red
+            exit 0
+        }
+        default {
+            Write-Host "Opción no válida" -ForegroundColor Red
+            exit 1
+        }
+    }
 }
 
 function main {
