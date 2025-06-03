@@ -3,7 +3,7 @@
 set -e  # Rompe si algo falla
 
 # Ruta del entorno virtual dentro del proyecto
-VENV_DIR="/home/ubuntu/feria_vlc/src/scripts/bash/venv"
+VENV_DIR="../app/venv"
 
 echo "Verificando entorno virtual..."
 

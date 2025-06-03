@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Cambia al directorio 'docker' (dos niveles arriba y luego 'docker')
-cd ../../docker
+cd ../docker
 
 # Verifica si existe el archivo .env en el directorio 'docker'
 if [ ! -f .env ]; then
