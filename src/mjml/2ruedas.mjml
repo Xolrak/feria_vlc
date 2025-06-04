@@ -1,0 +1,67 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <mj-attributes>
+      <mj-text font-family="Roboto, Arial, sans-serif" />
+      <mj-button font-family="Roboto, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#e63946">
+    <!-- Encabezado con el banner superior -->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-image src="../../assets/images/2ruedas/cabecera.jpg" alt="2Ruedas Banner" padding="0" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Título del sorteo -->
+    <mj-section padding-top="30px" padding-bottom="30px">
+      <mj-column>
+        <mj-text align="center" font-size="42px" font-weight="900" color="#ffffff" line-height="1.2">
+          ¡¡¡SORTEO!!!
+        </mj-text>
+        <mj-text align="center" font-size="24px" color="#ffffff" font-weight="600" padding-top="10px">
+          ¡CONSIGUE DOS ENTRADAS DE MOTO GP!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Motociclistas a los lados -->
+    <mj-section padding-top="20px" padding-bottom="20px">
+      <mj-column width="50%">
+        <mj-image src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/assets/images/2ruedas/moto_izq.png" alt="Moto izquierda" width="180px" padding="10px" />
+      </mj-column>
+      <mj-column width="50%">
+        <mj-image src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/assets/images/2ruedas/moto_der.png" alt="Moto derecha" width="180px" padding="10px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Texto del sorteo -->
+    <mj-section padding-top="30px" padding-bottom="30px">
+      <mj-column>
+        <mj-text align="center" font-size="18px" color="#ffffff" line-height="1.5" padding="20px">
+          Rellena el formulario de las entradas de 2Ruedas y podrás ganar unas entradas para el gran premio de Cheste.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Botón para rellenar el formulario -->
+    <mj-section padding-top="30px" padding-bottom="30px">
+      <mj-column>
+        <mj-button background-color="#ffffff" color="#e63946" font-weight="bold" href="URL_DEL_FORMULARIO" border-radius="30px" font-size="18px" padding="20px" inner-padding="15px 30px">
+          PARTICIPAR AHORA
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Imágenes inferiores del evento -->
+    <mj-section padding-bottom="40px">
+      <mj-column width="50%">
+        <mj-image src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/assets/images/2ruedas/img1_2ruedas1.jpg" alt="Evento izquierda" width="200px" border-radius="10px" />
+      </mj-column>
+      <mj-column width="50%">
+        <mj-image src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/assets/images/2ruedas/img2_2ruedas1.jpg" alt="Evento derecha" width="200px" border-radius="10px" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
