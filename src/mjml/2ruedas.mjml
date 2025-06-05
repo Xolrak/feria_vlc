@@ -10,7 +10,7 @@
     <!-- Encabezado con el banner superior -->
     <mj-section padding="0">
       <mj-column>
-        <mj-image src="../../assets/images/2ruedas/cabecera.jpg" alt="2Ruedas Banner" padding="0" />
+        <mj-image src="https://raw.githubusercontent.com/Xolrak/feria_vlc/refs/heads/main/assets/images/2ruedas/cabecera.jpg" alt="2Ruedas Banner" padding="0" />
       </mj-column>
     </mj-section>
 
