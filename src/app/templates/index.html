@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-info text-white">
+        <h4 class="mb-0">Menú de Envío de Correos</h4>
+    </div>
+    <div class="card-body">
+        <div class="d-grid gap-2">
+            <a href="{{ url_for('execute_option', option=1) }}" class="btn btn-primary btn-option">
+                <i class="bi bi-envelope-fill"></i>
+                1. Enviar Newsletter del Salón del Cómic (todos los usuarios)
+            </a>
+            <a href="{{ url_for('execute_option', option=2) }}" class="btn btn-success btn-option">
+                <i class="bi bi-bicycle"></i>
+                2. Enviar Sorteo 2RUEDAS (solo usuarios pendientes)
+            </a>
+            <a href="{{ url_for('execute_option', option=3) }}" class="btn btn-warning btn-option">
+                <i class="bi bi-person-plus-fill"></i>
+                3. Insertar nuevo usuario en la base de datos
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <div class="alert alert-info" role="alert">
+        <h5 class="alert-heading">Estado del Sistema:</h5>
+        <ul class="mb-0">
+            <li>Verificación de credenciales: ✓</li>
+            <li>Conversión MJML a HTML: ✓</li>
+            <li>Sistema listo para operar</li>
+        </ul>
+    </div>
+</div>
+{% endblock %} 

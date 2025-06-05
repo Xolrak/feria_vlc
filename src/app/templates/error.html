@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card border-danger">
+    <div class="card-header bg-danger text-white">
+        <h4 class="mb-0">Error del Sistema</h4>
+    </div>
+    <div class="card-body">
+        <div class="alert alert-danger" role="alert">
+            <h5 class="alert-heading">Se ha producido un error:</h5>
+            <p class="mb-0">{{ error }}</p>
+        </div>
+        
+        <div class="mt-4">
+            <h5>Posibles soluciones:</h5>
+            <ul>
+                <li>Verifica que el archivo de credenciales existe en la ubicación correcta</li>
+                <li>Asegúrate de que MJML está instalado y accesible desde la línea de comandos</li>
+                <li>Comprueba que tienes todos los permisos necesarios</li>
+            </ul>
+        </div>
+
+        <div class="mt-4">
+            <a href="/" class="btn btn-primary">Volver al Inicio</a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

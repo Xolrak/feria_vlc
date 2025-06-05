@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-warning">
+        <h4 class="mb-0 text-dark">Insertar Nuevo Usuario</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('nuevo_usuario_form') }}">
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo electrónico *</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre *</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="apellido1" class="form-label">Primer apellido *</label>
+                <input type="text" class="form-control" id="apellido1" name="apellido1" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="apellido2" class="form-label">Segundo apellido (opcional)</label>
+                <input type="text" class="form-control" id="apellido2" name="apellido2">
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-warning">Insertar Usuario</button>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-4">
+    <div class="alert alert-info" role="alert">
+        <h5 class="alert-heading">Información:</h5>
+        <ul class="mb-0">
+            <li>Los campos marcados con * son obligatorios</li>
+            <li>El correo electrónico debe ser válido</li>
+            <li>El segundo apellido es opcional</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
